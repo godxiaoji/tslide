@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>幻灯片</title>
+    <style type="text/css">
+        body,ul,li{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        .wrap{position: relative; width: 490px; height: 170px; margin: 0 auto; overflow: hidden;}
+        .list{position: absolute; height: 100%; width: 5000px;}
+        .list li{float: left;}
+        .list img{display: block; width: 100%; border: 0;}
+    </style>
+</head>
+<body>
+    <div class="wrap" id="slide">
+        <ul class="list J_List">
+            <li class="J_Item"><img src="images/img1.jpg" alt=""></li>
+            <li class="J_Item"><img src="images/img2.jpg" alt=""></li>
+            <li class="J_Item"><img src="images/img3.jpg" alt=""></li>
+            <li class="J_Item"><img src="images/img4.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../src/tslide.js"></script>
+    <script type="text/javascript">
+        var wrapper = document.getElementById('slide'),
+            slide = new tSlide(wrapper, {
+                autoPlay: true
+            });
+    </script>
+</body>
+</html>
